@@ -1,0 +1,6 @@
+extends layout
+
+block content
+    h1 The number of comments are #{comments.length}
+    each comment in comments
+      p #{comment.author} wrote: #{comment.comment} at #{comment.createdAt}

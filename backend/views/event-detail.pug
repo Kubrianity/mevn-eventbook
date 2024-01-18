@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    p This event will be held in #{event.place} at #{event.date}.
+    p #{event.attendees.length} people are planning to join this event!
+    each organizer in event.organizers
+      p Organizers: #{organizer.username}
+    each attendee in event.attendees
+      p Attendees: #{attendee.username}
+    each comment in event.comments
+      p Reviews: #{comment.comment} by #{comment.author} on#{comment.createdAt}

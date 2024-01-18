@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    h1 Here all the events listed 
+    each event in events 
+      h4 #{event.name} #{event._id}
+      p Location: #{event.place}
+      p Date: #{event.date}

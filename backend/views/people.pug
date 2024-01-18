@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    h1 The number of people are #{people.length}
+    each person in people
+      p #{person.username} #{person._id}
+      p Organized Events : #{person.createdEvents.length > 0 ? person.createdEvents.map(event => event.name) : "You have no organized event yet"}
+      p Upcoming Events : #{person.upcomingEvents.length > 0 ? person.upcomingEvents.map(event => event.name) : "You have no events to participate yet"}

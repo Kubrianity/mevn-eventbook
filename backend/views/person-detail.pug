@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    h3 #{person.username}
+    h4 Events you created
+    each event in person.createdEvents
+      p #{event.name}
+    h4 Events you plan to attend 
+    each event in person.upcomingEvents
+      p #{event.name}
+    h4 Your contacts: 
+    each contact in person.contacts 
+      p #{contact.username}
+    h4 Your comments
+    each comment in person.comments
+      p Comment: #{comment.comment} 
+      p Date: #{comment.createdAt}
+  
+       
