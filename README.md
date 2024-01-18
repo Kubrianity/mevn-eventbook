@@ -1,5 +1,5 @@
 # eventbook
-This project is called eventbook that you can create, update and cancel events as well as attending other events and connecting with attendees. <br>
+This project is called eventbook that you can create, update and cancel events as well as attending other events and connecting with attendees. <br><br>
 Link for this project: <br>
 https://eventbook-rd4n.onrender.com <br>
 ## Technologies
