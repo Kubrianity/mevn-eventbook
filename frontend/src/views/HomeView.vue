@@ -1,10 +1,12 @@
 <template lang = 'pug'>
 main
-  div.container.has-text-centered
-    h1.title.is-3 EVENTS
-    div.columns.is-multiline.is-centered(v-if = "events.length")
-      event-card(v-for = "event in sortedEvents" :event="event")
-    div(v-else)  
+  section.container.has-text-centered
+    h1.title.is-3(v-show = "isLoading") Please wait while connecting to the database
+    div(v-if = "!isLoading && events.length")
+      h1.title.is-3 EVENTS
+      div.columns.is-multiline.is-centered
+        event-card(v-for = "event in sortedEvents" :event="event")
+    div(v-show="!events.length && !isLoading")    
       h1.title.is-4 You don't have any events yet
       router-link.has-text-info(to = "/register" v-show = "!isAuthenticated") Sign up to create one!  
 loading(v-model:active = "isLoading" loader = "dots")  
@@ -22,7 +24,7 @@ export default {
   name: 'HomeView',
   data() {
     return {
-      isLoading: false
+      isLoading: ''
     }
   },
   components: {
