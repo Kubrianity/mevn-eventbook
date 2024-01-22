@@ -53,7 +53,7 @@ export default {
 </script>
 
 <style scoped>
-  div.container {
+  section.container {
     margin-top: 5em;
   }
 </style>
