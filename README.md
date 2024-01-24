@@ -28,7 +28,7 @@ https://eventbook-rd4n.onrender.com <br>
 ## Installation & Setup
 In order to run this application locally, node.js, npm and mongodb should be installed on your computer and **mongodb should be running**
 * Use the command below to clone this repository <br>
-*git clone https://github.com/Kubrianity/eventbook-for-deployment.git* <br>
+*git clone https://github.com/Kubrianity/mevn-eventbook.git* <br>
 * Change the directory using the following command<br>
 *cd backend* <br>
 Inside this *backend* folder, create .env file and set an environment variable for session secret like this example: **SESSION_SECRET="YOURSESSIONKEY"**
